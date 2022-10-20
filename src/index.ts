@@ -1,6 +1,6 @@
-import Credentials from "./Credentials";
+import Credentials from './Credentials';
 
-// TODO: This class needs to have CookieManager !
+// TODO: This class needs to have CookieManager
 // FIXME: Temporary solution
 export class LirbusClient {
     private credentials: Credentials;
