@@ -1,11 +1,14 @@
-import Credentials from './Credentials';
+export type Credits = {
+    login: string;
+    password: string;
+}
 
 // TODO: This class needs to have CookieManager
 // FIXME: Temporary solution
 export class LirbusClient {
-    private credentials: Credentials;
+    private credits: Credits
 
-    constructor(credentials: Credentials) {
-        this.credentials = credentials;
+    constructor(credits: Credits) {
+        this.credits = credits;
     }
 }
