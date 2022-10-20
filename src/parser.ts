@@ -1,5 +1,5 @@
 // Parsing strategy to use (we need to tell parser what we want from him)
-type TParsingStrategy = "";
+type TParsingStrategy = '';
 
 // TODO: Parser implementation
 export class Parser {

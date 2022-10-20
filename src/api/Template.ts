@@ -1,10 +1,10 @@
-import { LirbusClient } from "../index";
+import { LirbusClient } from '../index';
 
 export class Template {
     public client: LirbusClient;
     private endpoint: string;
 
-    public BASE_ENDPOINT = "https://synergia.librus.pl/";
+    public BASE_ENDPOINT = 'https://synergia.librus.pl/';
 
     constructor(client: LirbusClient) {
         this.client = client;
