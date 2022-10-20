@@ -1,6 +1,6 @@
 import { LirbusClient } from '../index';
 
-export class Template {
+export default class Template {
     public client: LirbusClient;
     private endpoint: string;
 
