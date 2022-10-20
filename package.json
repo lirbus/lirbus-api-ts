@@ -2,7 +2,7 @@
     "name": "lirbus-api-ts",
     "version": "1.0.0",
     "description": "TypeScript wrapper for Synergia",
-    "author": "github.com/lirbus",
+    "author": "lirbus",
     "repository": "https://github.com/lirbus/lirbus-api-ts",
     "license": "GPL-3.0",
     "type": "module",

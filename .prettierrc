@@ -1,7 +1,5 @@
 {
     "semi": true,
-    "proseWrap": "preserve",
     "tabWidth": 4,
-    "useTabs": false,
-    "singleQuote": true
+    "singleQuote": false
 }
