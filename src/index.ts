@@ -1,11 +1,14 @@
-import Credentials from './Credentials';
+import Credentials from './utils/CredentialsStore';
+import CookieManager from './utils/CookieManager';
 
-// TODO: This class needs to have CookieManager
-// FIXME: Temporary solution
 export class LirbusClient {
+    public cookies: CookieManager;
+
     private credentials: Credentials;
 
     constructor(credentials: Credentials) {
         this.credentials = credentials;
+
+        this.cookies = new CookieManager();
     }
 }
