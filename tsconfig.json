@@ -4,7 +4,7 @@
         "outDir": "build/",
         "module": "ESNext",
         "esModuleInterop": true,
-        "target": "ES2022",
+        "target": "ES2021",
         "paths": {
             "@src/*": ["src/"]
         }
