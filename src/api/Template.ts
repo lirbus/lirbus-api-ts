@@ -4,34 +4,48 @@ export default class Template {
     public client: LirbusClient;
     private endpoint: string;
 
-    public BASE_ENDPOINT = 'https://synergia.librus.pl/';
+    public HOST_URL = 'https://synergia.librus.pl/';
 
     constructor(client: LirbusClient) {
         this.client = client;
     }
 
-    public set setEndpoint(endpoint: string) {
-        this.endpoint = endpoint;
-    }
-
-    public get getEndpoint(): string {
+    public getEndpoint() {
         return this.endpoint;
     }
 
-    /**
-     * Performs request to Librus
-     * @returns HTML
-     */
-    private _request() {}
+    public setEndpoint(endpoint: string) {
+        this.endpoint = endpoint;
+
+        return this;
+    }
+
+    private _request(cookie: string) {
+        //document.cookie = cookie;
+
+        fetch(this.getEndpoint(), {
+            headers: new Headers({
+                Accept: 'text/html',
+                'Accept-Encoding': 'gzip, defalte, br',
+            }),
+
+            keepalive: true,
+        })
+            .then((res) => {
+                return res;
+            })
+            .catch((err) => {
+                return err;
+            });
+    }
 
     // TODO: Create an actual request method that we can use from Apis
-    /**
-     * Public method that performs ``_request()`` and parses it
-     * @returns Readable and organized output
-     */
-    public request(html: string) {
-        // do _request
-        // parse it
-        // return it
+    // TODO: Pass cookies
+    public request() {
+        // do _request for html
+        const response = this._request(this.client.cookies.buildJar());
+        //console.log(response);
+        // parse it parseHTML(html)
+        // return it return parsedhtml;
     }
 }
