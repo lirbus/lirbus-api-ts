@@ -1,5 +1,5 @@
 interface ICookieInJar {
-    key: any;
+    key: string;
     value: any;
 }
 
@@ -12,7 +12,7 @@ export default class CookieManager {
         this.cookies = [];
     }
 
-    public addCookie(key: any, value: any) {
+    public addCookie(key: string, value: any) {
         this.cookies.push({ key: key, value: value });
     }
 

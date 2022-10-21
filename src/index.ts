@@ -1,5 +1,5 @@
-import Credentials from './utils/CredentialsStore';
-import CookieManager from './utils/CookieManager';
+import Credentials from './util/CredentialsStore';
+import CookieManager from './util/CookieManager';
 
 export class LirbusClient {
     public cookies: CookieManager;
