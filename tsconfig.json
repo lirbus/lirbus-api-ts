@@ -1,12 +1,12 @@
 {
     "compilerOptions": {
-        "rootDir": "src/",
-        "outDir": "build/",
+        "rootDir": "lib/",
+        "outDir": "dist/",
         "module": "ESNext",
         "esModuleInterop": true,
         "target": "ES2021",
         "paths": {
-            "@src/*": ["src/"]
+            "@lirbus/*": ["./lib/"]
         }
     }
 }
