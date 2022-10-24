@@ -1,3 +1,5 @@
-import Template from './template';
+import Template from '../util/template';
 
-export default class Attendance extends Template {}
+export default class Attendance extends Template {
+    
+}

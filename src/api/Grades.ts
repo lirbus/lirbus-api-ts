@@ -1,4 +1,4 @@
-import Template from './template';
+import Template from '../util/template';
 
 type GradesTable = {
     student: string;
