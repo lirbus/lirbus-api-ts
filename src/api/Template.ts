@@ -2,28 +2,22 @@ import Lirbus from '../index';
 
 export default class Template {
     public client: Lirbus;
-    private endpoint: string;
 
-    public HOST_URL = 'https://synergia.librus.pl/';
+    private HOST_URL = 'https://synergia.librus.pl/';
+    protected endpoint: string;
 
     constructor(client: Lirbus) {
         this.client = client;
     }
 
-    public getEndpoint() {
-        return this.endpoint;
-    }
-
-    public setEndpoint(endpoint: string) {
-        this.endpoint = endpoint;
-
-        return this;
+    private get getEndpoint(): string {
+        return `${this.HOST_URL}${this.endpoint}`;
     }
 
     private _request(cookie: string) {
         //document.cookie = cookie;
 
-        fetch(this.getEndpoint(), {
+        fetch(this.getEndpoint, {
             headers: new Headers({
                 Accept: 'text/html',
                 'Accept-Encoding': 'gzip, defalte, br',
@@ -41,11 +35,12 @@ export default class Template {
 
     // TODO: Create an actual request method that we can use from Apis
     // TODO: Pass cookies
-    public request() {
+    public request(): Document {
         // do _request for html
         const response = this._request(this.client.cookies.buildJar());
         //console.log(response);
         // parse it parseHTML(html)
         // return it return parsedhtml;
+        return new Document();
     }
 }
