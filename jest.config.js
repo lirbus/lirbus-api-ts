@@ -13,7 +13,7 @@ const jestConfig = {
         ],
     },
     moduleNameMapper: {
-        '@lirbus/*': '<rootDir>/lib/$1',
+        '@src/*': '<rootDir>/src/$1',
     },
 };
 
