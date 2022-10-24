@@ -15,7 +15,7 @@ export default class Template {
     }
 
     private _request(cookie: string) {
-        //document.cookie = cookie;
+        // document.cookie = cookie;
 
         fetch(this.getEndpoint, {
             headers: new Headers({
@@ -24,13 +24,9 @@ export default class Template {
             }),
 
             keepalive: true,
-        })
-            .then((res) => {
-                return res;
-            })
-            .catch((err) => {
-                return err;
-            });
+        }).then((res) => {
+            return res.text();
+        });
     }
 
     // TODO: Create an actual request method that we can use from Apis
@@ -38,9 +34,17 @@ export default class Template {
     public request(): Document {
         // do _request for html
         const response = this._request(this.client.cookies.buildJar());
-        //console.log(response);
-        // parse it parseHTML(html)
-        // return it return parsedhtml;
-        return new Document();
+        // Is the response valid?
+
+        const htmlString = '<h1>To wait for the response</h1>';
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlString, 'text/html');
+
+        const error = doc.querySelector('parsererror');
+        if (error) {
+            throw new Error('Parsing failed');
+        }
+
+        return doc; // Return Document Body
     }
 }

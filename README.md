@@ -1,5 +1,10 @@
 # Lirbus API Wrapper
 
+- [ ] Auth
+- [x] Parsing
+- [ ] Modules
+- [ ] Polishing
+
 ## Testing
 
 Endpoint testing with [Burp](https://portswigger.net/burp)
