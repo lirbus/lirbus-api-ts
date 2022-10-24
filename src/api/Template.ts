@@ -1,12 +1,12 @@
-import { LirbusClient } from '../index';
+import Lirbus from '../index';
 
 export default class Template {
-    public client: LirbusClient;
+    public client: Lirbus;
     private endpoint: string;
 
     public HOST_URL = 'https://synergia.librus.pl/';
 
-    constructor(client: LirbusClient) {
+    constructor(client: Lirbus) {
         this.client = client;
     }
 

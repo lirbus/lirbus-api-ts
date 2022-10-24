@@ -1,3 +1,3 @@
-import Template from './Template';
+import Template from './template';
 
 export default class Homework extends Template {}

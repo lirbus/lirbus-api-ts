@@ -1,9 +1,8 @@
-import Credentials from './util/CredentialsStore';
-import CookieManager from './util/CookieManager';
+import Credentials from './util/credentials';
+import CookieManager from './util/cookies';
 
-export class LirbusClient {
+export default class LirbusClient {
     public cookies: CookieManager;
-
     private credentials: Credentials;
 
     constructor(credentials: Credentials) {
